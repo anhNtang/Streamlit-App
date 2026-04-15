@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import gdown 
 
 def load_data():
-    url = "https://drive.google.com/uc?id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    url = "https://drive.google.com/uc?id=1MUXTLZzmqlbVdLy_Nn2tjgzEVeCXdxCCGySoVmgL_V8"
     output = "data.csv" 
     gdown.download(url, output, quiet=False)
     return pd.read_csv(output, encoding="utf-8") 

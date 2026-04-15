@@ -10,7 +10,7 @@ def load_data():
     url = "https://drive.google.com/uc?id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
     output = "data.csv" 
     gdown.download(url, output, quiet=False)
-    return pd.read_csv(output) 
+    return pd.read_csv(output, encoding="utf-8") 
 
 
 def get_medal_counts(df, group_by_column):

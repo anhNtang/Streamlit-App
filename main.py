@@ -7,10 +7,11 @@ import plotly.graph_objects as go
 import gdown 
 
 def load_data():
-    url = "https://drive.google.com/uc?id=download&id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
-    gdown.download(url, "data.csv", quiet=False)
-    data = pd.read_csv(url)
-    return data 
+    url = "https://drive.google.com/uc?id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    output = "data.csv" 
+    gdown.download(url, output, quiet=False)
+    return pd.read_csv(output) 
+
 
 def get_medal_counts(df, group_by_column):
     return df.groupby([group_by_column])['Medal'].value_counts().unstack(fill_value=0)

@@ -6,7 +6,8 @@ import plotly.express as px
 import plotly.graph_objects as go 
 
 def load_data():
-    data = pd.read_csv("athlete_events.csv")
+    url = "https://drive.google.com/uc?id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    data = pd.read_csv(url)
     return data 
 
 def get_medal_counts(df, group_by_column):

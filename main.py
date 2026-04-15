@@ -6,7 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go 
 
 def load_data():
-    url = "https://drive.google.com/uc?id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    url = "https://drive.google.com/uc?export=download&id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
     data = pd.read_csv(url)
     return data 
 

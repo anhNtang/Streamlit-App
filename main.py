@@ -7,11 +7,7 @@ import plotly.graph_objects as go
 import gdown 
 
 def load_data():
-    url = "https://drive.google.com/uc?id=1MUXTLZzmqlbVdLy_Nn2tjgzEVeCXdxCCGySoVmgL_V8"
-    output = "data.csv" 
-    gdown.download(url, output, quiet=False)
-    return pd.read_csv(output, on_bad_lines="skip") 
-
+    return pd.read_csv("athlete_events.zip", compression="zip")
 
 def get_medal_counts(df, group_by_column):
     return df.groupby([group_by_column])['Medal'].value_counts().unstack(fill_value=0)

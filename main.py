@@ -4,9 +4,11 @@ from PIL import Image
 from streamlit_option_menu import option_menu # additional library 
 import plotly.express as px
 import plotly.graph_objects as go 
+import gdown 
 
 def load_data():
-    url = "https://drive.google.com/uc?export=download&id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    url = "https://drive.google.com/uc?id=download&id=1qozTNL-h2met1Fy0-r3QgiaOT1LDFpXb39It1UWUnrM"
+    gdown.download(url, "data.csv", quiet=False)
     data = pd.read_csv(url)
     return data 
 

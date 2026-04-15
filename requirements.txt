@@ -1,3 +1,2 @@
 streamlit-option-menu
-plotly.express
-plotly.graph_objects 
+plotly
